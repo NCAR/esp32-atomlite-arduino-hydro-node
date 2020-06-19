@@ -20,4 +20,14 @@ jobs:
         # See https://github.com/github/super-linter/ for configuration
         # documentation
         env:
-          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_GO: false
+          VALIDATE_XML: false
+          VALIDATE_PERL: false
+          VALIDATE_RUBY: false
+          VALIDATE_COFFEE: false
+          VALIDATE_ANSIBLE: false
+          VALIDATE_DOCKER: false
+          VALIDATE_TERRAFORM: false
+          VALIDATE_PYTHON: false
+          VALIDATE_JAVASCRIPT_ES: false
