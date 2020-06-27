@@ -49,4 +49,4 @@ jobs:
 
       - name: Compile sketch
         run: |
-          arduino-cli compile --fqbn ${{ matrix.fqbn }}:PartitionScheme=huge_app,UploadSpeed=115200 esp32-atomlite-arduino-hydro-node --verbose
+          arduino-cli compile --fqbn ${{ matrix.fqbn }}:PartitionScheme=huge_app,UploadSpeed=115200 hydro-node --verbose
