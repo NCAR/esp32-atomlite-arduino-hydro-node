@@ -39,7 +39,14 @@ jobs:
         run: |
           arduino-cli lib update-index --verbose
           arduino-cli lib install NTPClient FastLED ArduinoJson --verbose
+          git clone https://github.com/Seeed-Studio/Seeed_VEML6070 ~/Arduino/libraries/Seeed_VEML6070
+          git clone https://github.com/Seeed-Studio/Seeed_BME680 ~/Arduino/libraries/Seeed_BME680
+          git clone https://github.com/Seeed-Studio/Grove_BME280 ~/Arduino/libraries/Grove_BME280
+
+      - name: List installed libraries
+        run: |
+          arduino-cli lib list
 
       - name: Compile sketch
         run: |
-          arduino-cli compile --fqbn ${{ matrix.fqbn }} "test" --verbose
+          arduino-cli compile --fqbn ${{ matrix.fqbn }}:PartitionScheme=huge_app,UploadSpeed=115200 esp32-atomlite-arduino-hydro-node --verbose
