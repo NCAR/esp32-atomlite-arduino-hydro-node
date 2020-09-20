@@ -48,10 +48,5 @@ jobs:
 
       - name: Compile sketch
         run: |
-          mkdir -p build
           arduino-cli compile --fqbn ${{ matrix.fqbn }}:PartitionScheme=huge_app,UploadSpeed=115200 \
-             esp32-atomlite-arduino-hydro-node.ino --build-path build --verbose
-
-      - name: List compiled files
-        run: |
-          ls -lah build/*
+             esp32-atomlite-arduino-hydro-node.ino --verbose
