@@ -27,7 +27,7 @@
     Change Log :
 */
 #include <WiFi.h>
-#include "BluetoothSerial.h" // Header File for Serial BluetoothTurotial on: www.circuitdigest.com 
+#include "BluetoothSerial.h" // Header File for Serial BluetoothTurotial on: www.circuitdigest.com
 #include "nvs_flash.h"       // non-volatile ram
 #include "SPIFFS.h"          // SPIFFS file system
 #include <ArduinoJson.h>     // JSON decoding
