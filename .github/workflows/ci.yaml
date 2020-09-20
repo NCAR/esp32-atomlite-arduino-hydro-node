@@ -39,6 +39,7 @@ jobs:
         run: |
           arduino-cli lib update-index --verbose
           arduino-cli lib install NTPClient FastLED ArduinoJson --verbose
+          git clone https://github.com/256dpi/arduino-mqtt.git ~/Arduino/libraries/arduino-mqtt
 
       - name: Install IOTWX Library
         run: |
